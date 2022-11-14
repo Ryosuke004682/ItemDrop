@@ -2,58 +2,80 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro.EditorUtilities;
 using UnityEngine;
-
+using UnityEngine.Assertions.Must;
 
 [RequireComponent(typeof(CharacterController))]
 
 public class PlayerMove1 : MonoBehaviour
 {
-    [Header("PlayerˆÚ“®ŠÖ˜A")]
-    public float _speed = 0;
+    [Header("PlayerˆÚ“®")]
+    public float _speed = 1.0f;//ˆÚ“®—p
+    public bool attack = false;
+
+    Vector3 velocity;
 
     Animator _anim;
-    Vector3  velocity;
     CharacterController _controller;
 
     private void Start()
     {
-        _anim = GetComponent<Animator>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         _controller = GetComponent<CharacterController>();
+        _anim = GetComponent<Animator>();
     }
 
-    private void FixedUpdate()
+
+    private void Update()
     {
-        var horizontal = Input.GetAxisRaw("Horizontal") * _speed;
-        var vertical   = Input.GetAxisRaw("Vertical") * _speed;
+        Move();
+    }
+
+    protected void Move()
+    {
+        var horizontal = Input.GetAxis("Horizontal") * _speed;
+        var vertical   = Input.GetAxis("Vertical")   * _speed;
+
+        velocity = new(horizontal, 0, vertical);
 
         if(_controller.isGrounded)
         {
-            velocity = new Vector3(horizontal,0,vertical);
-
             if(velocity.magnitude > 0.1f)
             {
-                _anim.SetFloat("MoveSpeed" , velocity.magnitude);
+                _anim.SetFloat("MoveSpeed", velocity.magnitude);
                 transform.LookAt(transform.position + velocity);
+
             }
             else
             {
-                _anim.SetFloat("MoveSpeed" , 0f);
+                _anim.SetFloat("MoveSpeed" , 0);
             }
         }
-        velocity.y += Physics.gravity.y * Time.deltaTime;
-        _controller.Move(velocity * _speed * Time.deltaTime);
 
+        _controller.Move(velocity * _speed * Time.deltaTime);
 
         if (Input.GetMouseButtonDown(0))
         {
-            _anim.SetBool("Attack", true);
+            attack = true;
+            
+            if(attack == true)
+            {
+                _anim.SetBool("Attack" , true);
+            }
+            
         }
         else if(Input.GetMouseButtonUp(0))
         {
-            _anim.SetBool("Attack",false);
+            attack = false;
+
+            if(attack == false)
+            {
+                _anim.SetBool("Attack" , false);
+            }
         }
-       
-       
+        
+      
 
     }
 
