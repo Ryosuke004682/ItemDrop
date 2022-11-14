@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Delete_Enemy : MonoBehaviour
 {
+
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
