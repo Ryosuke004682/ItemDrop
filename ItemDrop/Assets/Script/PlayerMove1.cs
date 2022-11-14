@@ -48,10 +48,11 @@ public class PlayerMove1 : MonoBehaviour
         {
             _anim.SetBool("Attack", true);
         }
-        else if (Input.GetMouseButtonUp(0))
+        else if(Input.GetMouseButtonUp(0))
         {
             _anim.SetBool("Attack",false);
         }
+       
        
 
     }
