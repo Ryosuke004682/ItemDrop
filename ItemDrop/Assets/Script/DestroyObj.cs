@@ -20,8 +20,8 @@ public class DestroyObj : ItemDrop
             if(drop == true)
             {
                 Debug.Log("True");
-
                 Instantiate(tuna , this.transform.position , this.transform.rotation);
+               
             }
         }
         

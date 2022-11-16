@@ -20,7 +20,6 @@ public class ItemDrop : MonoBehaviour
         _rb.constraints = RigidbodyConstraints.FreezePosition;
     }
 
-
     //ドロップさせるアイテムを書いておく
     public Item tuna;       　//マグロ
 }

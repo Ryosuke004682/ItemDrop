@@ -641,8 +641,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.619292, y: 5.0395966, z: 32.544735}
-  m_Center: {x: 0.3641304, y: 0.18052492, z: -24.112406}
+  m_Size: {x: 1.43, y: 0.68, z: 27.06}
+  m_Center: {x: -0.23, y: 0.18052492, z: -24.112406}
 --- !u!4 &694903555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6632814763172354410, guid: 5917c0e93d180a842b61d1ebc62a195c, type: 3}
@@ -1148,8 +1148,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tuna: {fileID: 6384198904662303261, guid: b6204bc9731029a4d89775dfa408aa60, type: 3}
-  mackerelPick: {fileID: -4462997546560584020, guid: 16dfaef2fa3ed4a439018abd4fb3cb23, type: 3}
-  skipjackTuna: {fileID: -1647399438563866410, guid: 93c2a0b98f305344b97b41babe286fd1, type: 3}
 --- !u!4 &1047934567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: bcd958b8c15a1fa41adc720ee6acb3d0, type: 3}
@@ -1377,7 +1375,7 @@ GameObject:
   - component: {fileID: 1868976124}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Sword
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1490,8 +1488,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tuna: {fileID: 6384198904662303261, guid: b6204bc9731029a4d89775dfa408aa60, type: 3}
-  mackerelPick: {fileID: -4462997546560584020, guid: 16dfaef2fa3ed4a439018abd4fb3cb23, type: 3}
-  skipjackTuna: {fileID: -1647399438563866410, guid: 93c2a0b98f305344b97b41babe286fd1, type: 3}
 --- !u!1001 &1891859999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1678,8 +1674,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tuna: {fileID: 6384198904662303261, guid: b6204bc9731029a4d89775dfa408aa60, type: 3}
-  mackerelPick: {fileID: -4462997546560584020, guid: 16dfaef2fa3ed4a439018abd4fb3cb23, type: 3}
-  skipjackTuna: {fileID: -1647399438563866410, guid: 93c2a0b98f305344b97b41babe286fd1, type: 3}
 --- !u!1001 &2000611911
 PrefabInstance:
   m_ObjectHideFlags: 0
