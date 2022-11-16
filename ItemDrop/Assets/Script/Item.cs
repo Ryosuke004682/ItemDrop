@@ -14,4 +14,5 @@ public class Item : MonoBehaviour
         SkipjackTuna　 //カツオ
    }
     public ItemType item;
+
 }

@@ -22,4 +22,7 @@ public class ItemDrop : MonoBehaviour
 
     //ドロップさせるアイテムを書いておく
     public Item tuna;       　//マグロ
+    public Item mackerelPick; //サンマ
+    public Item skipjackTuna; //カツオ
+
 }
