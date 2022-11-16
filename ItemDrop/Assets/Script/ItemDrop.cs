@@ -1,49 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
-[Serializable]
-[CreateAssetMenu(fileName = "Item" , menuName = "CreateItem")]
+//だいたい同じ確率でドロップさせる
+
 public class ItemDrop : MonoBehaviour
 {
-   public enum Item
+    public Item tuna;       　//マグロ
+    public Item mackerelPick; //サンマ
+    public Item skipjackTuna; //カツオ
+
+    void Drop()
     {
-        Tuna,
-        SkipjackTuna,
-        MackerelPick
+        float random = Random.Range(0 , 1f);
+
+        if(random <= 0.33)
+        {
+            Instantiate(tuna , transform.position, Quaternion.identity);
+        }
+        else if(random <= 0.33)
+        {
+            Instantiate(mackerelPick, transform.position, Quaternion.identity);
+        }
+        else if(random <= 0.33)
+        {
+            Instantiate(skipjackTuna, transform.position, Quaternion.identity);
+        }
     }
-
-    [SerializeField]
-    public Item itemType = Item.Tuna;
-
-    [SerializeField]
-    private string itemName = "";
-
-    [SerializeField]
-    private string information = "";
-
-    [SerializeField]
-    private int amount = 0;
-
-    public Item GetItemType()
-    {
-        return itemType;
-    }
-
-    public string ItemNaming()
-    {
-        return itemName;
-    }
-
-    public string Information()
-    {
-        return information;
-    }
-
-    public int GetAmount()
-    {
-        return amount;
-    }
-
 }
