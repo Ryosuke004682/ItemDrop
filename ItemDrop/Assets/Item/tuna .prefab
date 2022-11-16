@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4139231252138375991}
   - component: {fileID: 7798333374034877871}
   - component: {fileID: 5958217256042389735}
-  - component: {fileID: 2178282657339175099}
+  - component: {fileID: 6384198904662303261}
   m_Layer: 0
   m_Name: 'tuna '
   m_TagString: Untagged
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2178282657339175099
+--- !u!114 &6384198904662303261
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,10 +107,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1990058867103340868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e51e6862a04ec554fa3bb4c506a04aab, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d2748a12e9bf6c4fb117d0e59f92036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemType: 0
-  ItemName: "\u30DE\u30B0\u30ED"
-  Item_information: "\uFF11\u5339\u306E\u30DE\u30B0\u30ED"
-  number: 1
+  item: 0

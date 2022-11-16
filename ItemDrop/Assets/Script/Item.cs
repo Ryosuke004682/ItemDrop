@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-   public enum ItemType
+    Rigidbody _rb;
+
+    private void Start()
+    {
+        _rb = GetComponent<Rigidbody>();
+
+        _rb.constraints = RigidbodyConstraints.FreezePosition;
+        _rb.constraints = RigidbodyConstraints.FreezeRotation;
+    }
+
+    public enum ItemType
    {
         Tuna,
         MackerelPick,
@@ -12,13 +22,4 @@ public class Item : MonoBehaviour
    }
 
     public ItemType item;
-
-    private void OnTriggerEnter(Collider other)
-    {
-       if(other.gameObject.tag == "Sword")
-        {
-            Destroy(gameObject);
-        }
-    }
-
 }

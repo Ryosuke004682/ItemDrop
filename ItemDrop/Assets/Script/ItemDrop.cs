@@ -16,15 +16,15 @@ public class ItemDrop : MonoBehaviour
 
         if(random <= 0.33)
         {
-            Instantiate(tuna , transform.position, Quaternion.identity);
+            Instantiate(tuna , transform.position, transform.rotation);
         }
         else if(random <= 0.33)
         {
-            Instantiate(mackerelPick, transform.position, Quaternion.identity);
+            Instantiate(mackerelPick, transform.position, transform.rotation);
         }
         else if(random <= 0.33)
         {
-            Instantiate(skipjackTuna, transform.position, Quaternion.identity);
+            Instantiate(skipjackTuna, transform.position, transform.rotation);
         }
     }
 }
