@@ -2,22 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyObj : MonoBehaviour
-{
-    Rigidbody _rb;
-    public void Start()
-    {
-        _rb = GetComponent<Rigidbody>();
+/// <summary>
+/// ドロップ機能を記述しておく
+/// </summary>
+public class DestroyObj : ItemDrop
+{    
+    private bool drop = false;
 
-        _rb.constraints = RigidbodyConstraints.FreezeRotation;
-        _rb.constraints = RigidbodyConstraints.FreezePosition;
-    }
-
+    //オブジェクトを倒したときにドロップさせる
     public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Sword")
         {
+            drop = true;
             Destroy(this.gameObject);
+            
+            if(drop == true)
+            {
+                Debug.Log("True");
+
+                Instantiate(tuna , this.transform.position , this.transform.rotation);
+            }
         }
+        
     }
 }

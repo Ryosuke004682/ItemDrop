@@ -2,24 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// アイテムの種類を列挙しておく
+/// </summary>
 public class Item : MonoBehaviour
 {
-    Rigidbody _rb;
-
-    private void Start()
-    {
-        _rb = GetComponent<Rigidbody>();
-
-        _rb.constraints = RigidbodyConstraints.FreezePosition;
-        _rb.constraints = RigidbodyConstraints.FreezeRotation;
-    }
-
     public enum ItemType
    {
-        Tuna,
-        MackerelPick,
-        SkipjackTuna
+        Tuna,　　　　　//マグロ
+        MackerelPick,　//サンマ
+        SkipjackTuna　 //カツオ
    }
-
     public ItemType item;
 }

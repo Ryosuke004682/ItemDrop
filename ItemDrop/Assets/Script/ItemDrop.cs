@@ -2,29 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//だいたい同じ確率でドロップさせる
-
+/// <summary>
+/// ドロップするアイテムについて書いてく
+/// </summary>
 public class ItemDrop : MonoBehaviour
 {
-    public Item tuna;       　//マグロ
-    public Item mackerelPick; //サンマ
-    public Item skipjackTuna; //カツオ
+    //実験用の簡易的なドロップ機能なので、
+    //ここにRigidbodyを追加しときます。
+    //（本当は、Enemyのステータスを管理してるところに書こうね）
 
-    void Drop()
+    Rigidbody _rb;
+    public void Start()
     {
-        float random = Random.Range(0 , 1f);
+        _rb = GetComponent<Rigidbody>();
 
-        if(random <= 0.33)
-        {
-            Instantiate(tuna , transform.position, transform.rotation);
-        }
-        else if(random <= 0.33)
-        {
-            Instantiate(mackerelPick, transform.position, transform.rotation);
-        }
-        else if(random <= 0.33)
-        {
-            Instantiate(skipjackTuna, transform.position, transform.rotation);
-        }
+        _rb.freezeRotation = true;
+        _rb.constraints = RigidbodyConstraints.FreezePosition;
     }
+
+
+    //ドロップさせるアイテムを書いておく
+    public Item tuna;       　//マグロ
 }
