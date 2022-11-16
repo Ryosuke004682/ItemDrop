@@ -4,16 +4,11 @@ using UnityEngine;
 
 /// <summary>
 /// ドロップ機能を記述しておく
-/// 確率計算も追加
+///  確率計算も追加
 /// </summary>
 public class DestroyObj : ItemDrop
 {
     private int number;
-
-    public void DropProbability()
-    {
-        number = Random.Range(0, 100);
-    }
 
     private bool drop = false;
 
@@ -24,22 +19,26 @@ public class DestroyObj : ItemDrop
         {
             drop = true;
             Destroy(this.gameObject);
-            
-            if(drop == true)
+
+
+            number = Random.Range(0, 101);
+
+            if (drop == true && number >= 0 && number < 30)
             {
-               if(number <= 40)
-                {
-                    Instantiate(tuna , this.transform.position , this.transform.rotation);
-                }
-               else if(number <= 30)
-                {
-                    Instantiate(skipjackTuna, this.transform.position, this.transform.rotation);
-                }
-               else
-                {
-                    Instantiate(mackerelPick, this.transform.position, this.transform.rotation);
-                }
-                
+                Instantiate(tuna,this.transform.position , this.transform.rotation);
+                Debug.Log("マグロだ！");
+            }
+            
+            else if(drop == true && number >= 30 && number < 60)
+            {
+                Instantiate(skipjackTuna, this.transform.position, this.transform.rotation);
+                Debug.Log("カツオだ！");
+            }
+
+            else if(drop == true && number >= 60 && number <= 100)
+            {
+                Instantiate(mackerelPick, this.transform.position, this.transform.rotation);
+                Debug.Log("サンマだ！");
             }
             
 
