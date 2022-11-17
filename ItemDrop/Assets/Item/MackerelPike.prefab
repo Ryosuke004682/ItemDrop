@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7405989880984859305}
   - component: {fileID: 3791931566043253534}
   - component: {fileID: -4462997546560584020}
+  - component: {fileID: 3353496624094009387}
   m_Layer: 0
   m_Name: MackerelPike
-  m_TagString: Untagged
+  m_TagString: mackerelPike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +94,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3169279669182312864}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -111,3 +112,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: 1
+--- !u!114 &3353496624094009387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3169279669182312864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83536558d4c1a2849a13bd1e0355ff67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

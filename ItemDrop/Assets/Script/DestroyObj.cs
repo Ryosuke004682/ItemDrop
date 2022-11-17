@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -40,9 +41,6 @@ public class DestroyObj : ItemDrop
                 Instantiate(mackerelPick, this.transform.position, this.transform.rotation);
                 Debug.Log("ÉTÉìÉ}ÇæÅI");
             }
-            
-
-        }
-        
+        }   
     }
 }

@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3529477279601101836}
   - component: {fileID: 5685772840586138388}
   - component: {fileID: -1647399438563866410}
+  - component: {fileID: 1863005566223065493}
   m_Layer: 0
   m_Name: SkipjackTuna
-  m_TagString: Untagged
+  m_TagString: skipjackTuna
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +94,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146610446075284613}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -111,3 +112,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: 2
+--- !u!114 &1863005566223065493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146610446075284613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83536558d4c1a2849a13bd1e0355ff67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7798333374034877871}
   - component: {fileID: 5958217256042389735}
   - component: {fileID: 6384198904662303261}
+  - component: {fileID: 2508281908940058216}
   m_Layer: 0
   m_Name: 'tuna '
-  m_TagString: Untagged
+  m_TagString: tuna
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +94,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990058867103340868}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -111,3 +112,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: 0
+--- !u!114 &2508281908940058216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990058867103340868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83536558d4c1a2849a13bd1e0355ff67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
